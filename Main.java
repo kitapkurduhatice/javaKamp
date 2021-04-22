@@ -1,0 +1,54 @@
+package intro;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String internetSubeButonu = "İnternet Şubesi";
+		
+		double dolarDun = 8.15;
+		double dolarBugun = 8.18;
+		int vade = 35;
+		boolean dustuMu = false;
+		
+		if(dolarBugun < dolarDun) {
+			System.out.println("Dolar düştü resmi");
+		}else if(dolarBugun > dolarDun){
+			System.out.println("Dolar yükseldi resmi");
+		}else {
+			System.out.println("Eşittir resmi");
+		}
+		
+		String[] krediler = {"Hızlı Krediler", "Mutlu Emekli Kredisi", "Konut Kredisi"};
+		for(String kredi : krediler) {
+			System.out.println(kredi);
+		}
+		
+		for(int i =0; i < krediler.length; i++) {
+			System.out.println(krediler[i]);
+		}
+		
+		//deger type(sayısal veri tipi float,boolean,double,int. Stack ve Heap. 
+		//Değer tipler stacklarda çalışır. Atama değeri üzerinden yapılır. )
+		//Değer atar ve iş biter
+		int sayi1 = 10;
+		int sayi2 = 20;
+		sayi1 = sayi2;
+		sayi2 =100;
+		System.out.println(sayi1);
+		 //reference type : Heapde tutar. Referans tiplerine göre çalışır.
+		//referans neyi görürse odur.
+		int[] sayilar1 = {1,2,3,4,5};
+		int[] sayilar2 = {10,20,30,40,50};
+		sayilar1 = sayilar2;
+		sayilar2[0] =100;
+		System.out.println(sayilar1[0]);
+		
+		
+		// System.out.println("Hello World");
+		
+		// System.out.println(internetSubeButonu);
+
+	}
+
+}
