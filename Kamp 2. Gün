@@ -1,0 +1,89 @@
+package oopIntro;
+
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Product product1 = new Product(); //örnek oluşturma, referans oluşturma, intance 
+		product1.id = 1;
+		product1.name = "Lenovo V14";
+		product1.unitPrice = 15000;
+		product1.detail = "16 GB Ram";
+		
+		Product product2 = new Product(2, "Lenovo V15", 16000, "32 GB Ram"); 
+		
+		Product product3 = new Product();  
+		product3.id = 3;
+		product3.name = "Hp 5";
+		product3.unitPrice = 10000;
+		product3.detail = "8 GB Ram";
+		
+		Product[] products = {product1, product2, product3};
+		
+		for(Product product : products) {
+			System.out.println(product.name);
+		}
+		System.out.println(products.length);
+		
+		
+		Category category = new Category();
+		category.id = 1;
+		category.name = "Bilgisayar";
+		
+		Category category2 = new Category();
+		category2.id = 2;
+		category2.name = "Ev/Bahçe";
+		
+		ProductManager manager = new ProductManager();
+		manager.addToCart(product1);
+		manager.addToCart(product2);
+		manager.addToCart(product3);
+		
+		
+		
+		
+ 	}
+
+}
+
+package oopIntro;
+
+public class Product {
+
+	int id;
+	String name;
+	double unitPrice;
+	String detail;
+	
+	public Product() {
+		System.out.println("Good luck");
+	}
+	
+	public Product(int id, String name, double unitPrice, String detail) {
+		this.id = id;
+		this.name = name;
+		this.unitPrice = unitPrice;
+		this.detail = detail;
+		
+	}
+}
+
+package oopIntro;
+
+public class ProductManager {
+	public void addToCart(Product product) {
+		System.out.println("Sepete ekle çağırıldı: " + product.name);
+	}
+}
+
+package oopIntro;
+
+public class Category {
+	int id;
+    String name;
+
+}
